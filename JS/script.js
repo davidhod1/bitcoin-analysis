@@ -1,7 +1,7 @@
 
-d3.json("https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=200&aggregate=3&e=CCCAGG",function(input) {
+d3.json("https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&allData=true&api_key=7d9dc67b9aa8c001318aa59dee8bc95dd9d7a0d2efff4131ce1e5590c5ce6b17",function(input) {
 
-const data = input.Data;
+const data = input.Data.Data;
 
 data.forEach(function(d){ d.time = new Date(d.time * 1000) });
       
